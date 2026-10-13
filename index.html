@@ -1,0 +1,304 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nova — Software</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #090a10;
+  color: #f4f4fa;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
+
+nav {
+  max-width: 1100px;
+  margin: auto;
+  padding: 25px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #20212d;
+}
+
+.logo {
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-size: 17px;
+}
+
+.logo span {
+  color: #9b87ff;
+}
+
+nav a {
+  color: #a5a5b8;
+  text-decoration: none;
+  margin-left: 24px;
+  font-size: 13px;
+}
+
+nav a:hover {
+  color: white;
+}
+
+main {
+  max-width: 1000px;
+  margin: auto;
+  padding: 85px 24px;
+}
+
+.tag {
+  display: inline-block;
+  border: 1px solid #39304f;
+  background: #191425;
+  color: #b9aaff;
+  border-radius: 30px;
+  padding: 8px 13px;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+h1 {
+  margin-top: 25px;
+  font-size: clamp(42px, 7vw, 72px);
+  letter-spacing: -3px;
+  line-height: 1.06;
+}
+
+h1 span {
+  color: #a18aff;
+}
+
+.subtitle {
+  color: #9999ad;
+  line-height: 1.8;
+  max-width: 470px;
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 85px 0 22px;
+}
+
+.section-heading h2 {
+  font-size: 20px;
+}
+
+.section-heading span {
+  color: #77778c;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.card {
+  background: linear-gradient(145deg, #151621, #101117);
+  border: 1px solid #292a39;
+  border-radius: 15px;
+  padding: 25px;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: #6855a7;
+}
+
+.app-icon {
+  width: 48px;
+  height: 48px;
+  background: #27203f;
+  border: 1px solid #453568;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  color: #bbaaff;
+  font-size: 23px;
+  margin-bottom: 23px;
+}
+
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #9696aa;
+  font-size: 13px;
+  line-height: 1.7;
+  min-height: 43px;
+}
+
+.meta {
+  display: flex;
+  gap: 8px;
+  margin: 20px 0;
+}
+
+.meta span {
+  background: #20212d;
+  color: #aaaabd;
+  padding: 6px 9px;
+  border-radius: 5px;
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+.download {
+  display: block;
+  text-align: center;
+  background: #a18aff;
+  color: #100c1b;
+  padding: 13px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.download:hover {
+  background: #b8a7ff;
+}
+
+.coming {
+  display: block;
+  text-align: center;
+  background: #20212b;
+  color: #737388;
+  padding: 13px;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+footer {
+  max-width: 1000px;
+  margin: auto;
+  padding: 25px 24px 35px;
+  border-top: 1px solid #20212d;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  color: #77778c;
+  font-size: 11px;
+}
+
+footer a {
+  color: #aaa0e8;
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  nav a {
+    margin-left: 10px;
+    font-size: 11px;
+  }
+
+  main {
+    padding-top: 60px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading {
+    margin-top: 60px;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">NOVA <span>/</span> SOFTWARE</div>
+  <div>
+    <a href="#home">Home</a>
+    <a href="#downloads">Downloads</a>
+    <a href="https://github.com/">GitHub</a>
+  </div>
+</nav>
+
+<main id="home">
+  <div class="tag">INDEPENDENT SOFTWARE</div>
+
+  <h1>Small tools.<br>
+    <span>Built to do more.</span>
+  </h1>
+
+  <p class="subtitle">
+    A collection of useful Windows applications,
+    utilities, and tools. Made independently.
+  </p>
+
+  <div class="section-heading" id="downloads">
+    <h2>Downloads</h2>
+    <span>LATEST RELEASES</span>
+  </div>
+
+  <div class="cards">
+
+    <div class="card">
+      <div class="app-icon">⌘</div>
+      <h3>Nova Auto Clicker</h3>
+      <p>A lightweight utility for repetitive clicking.</p>
+
+      <div class="meta">
+        <span>WINDOWS</span>
+        <span>.EXE</span>
+      </div>
+
+      <a class="download"
+         href="PASTE_YOUR_EXE_DOWNLOAD_LINK_HERE">
+        ↓ &nbsp; Download for Windows
+      </a>
+    </div>
+
+    <div class="card">
+      <div class="app-icon">⌁</div>
+      <h3>Nova Tools</h3>
+      <p>Small utilities to make everyday tasks easier.</p>
+
+      <div class="meta">
+        <span>WINDOWS</span>
+        <span>.EXE</span>
+      </div>
+
+      <span class="coming">Coming soon</span>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <span>© 2026 Nova Software. Made independently.</span>
+  <a href="https://github.com/">Source & updates on GitHub ↗</a>
+</footer>
+
+</body>
+</html>
+```
